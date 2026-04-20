@@ -3,35 +3,42 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Website Portofolio Saya</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            text-align: center;
-            background-color: #f4f4f4;
-            padding: 50px;
-        }
-        .card {
-            background: white;
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-            display: inline-block;
-        }
-        h1 { color: #333; }
-        p { color: #666; }
-        a { color: #007bff; text-decoration: none; }
-    </style>
+    <title>Form Data PB</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <div class="container">
+        <h2>Form Pengisian Data PB</h2>
+        <form id="formPB">
+            <label>Tingkat Daerah:</label>
+            <select name="tingkat" required>
+                <option value="">-- Pilih Tingkat --</option>
+                <option value="Pusat">Pusat</option>
+                <option value="Daerah">Daerah</option>
+            </select>
 
-    <div class="card">
-        <h1>Halo, Saya [Nama Kamu]! 👋</h1>
-        <p>Selamat datang di website pertama saya yang dihosting di GitHub Pages.</p>
-        <p>Saya sedang belajar membuat website dengan HTML dan CSS.</p>
-        <hr>
-        <p>Hubungi saya di: <a href="mailto:email@kamu.com">email@kamu.com</a></p>
+            <label>Provinsi:</label>
+            <select name="provinsi" id="provinsi" required>
+                <option value="">-- Pilih Provinsi --</option>
+            </select>
+
+            <label>Kabupaten:</label>
+            <select name="kabupaten" id="kabupaten" required>
+                <option value="">-- Pilih Kabupaten --</option>
+            </select>
+
+            <input type="text" name="nama" placeholder="Nama Lengkap" required>
+            <input type="text" name="jabatan" placeholder="Jabatan" required>
+            <input type="text" name="nik" placeholder="NIK" required>
+            <input type="text" name="kta" placeholder="Nomor KTA" required>
+            <input type="tel" name="hp" placeholder="No. HP / WhatsApp" required>
+
+            <button type="submit" id="btnSubmit">Kirim Data</button>
+        </form>
+        <div id="status"></div>
     </div>
 
+    <!-- Panggil file JavaScript -->
+    <script src="script.js"></script>
 </body>
 </html>
